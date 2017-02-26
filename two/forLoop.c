@@ -2,10 +2,11 @@
 
 #define MAX_STRING_LENGTH 100
 
+/* this is the first versio of the code. */
 int main(void)
 {
 
-    int = 0,
+    int i = 0,
           lim = MAX_STRING_LENGTH,
            c;
     char s[MAX_STRING_LENGTH];
@@ -23,3 +24,4 @@ int main(void)
     s[i] = '\0';
     return 0;
 }
+
