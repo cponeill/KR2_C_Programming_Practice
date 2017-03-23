@@ -49,3 +49,50 @@ void ungetch(int c)
     else
         buf[bufp++] = c;
 }
+
+/* the getfloat function */
+#include <ctype.h>
+#include <math.h>
+
+int getflaot(float *pn)
+{
+    int ch, sign, fraction, digits;
+
+    while (isspace(ch = getch())) /* Skip white space */
+        ;
+
+    if (!isdigit(ch) && ch != EOF && ch != '+'
+                     && ch != '-' && ch != '.') {
+        ungetch(ch);
+        return 0;
+    }
+
+    sign = (ch =='-') ? -1 : 1;
+    if (ch == '+' || ch == '-') {
+        ch = getch();
+        if (!isdigit(ch) && ch != '.') {
+            if (ch == EOF) {
+                return EOF;
+            } else {
+                ungetch(ch);
+                return 0;
+            }
+        }
+    }
+
+    *fp = 0;
+    fraction = 0;
+    digits = 0;
+    for ( ; isdigit(ch) || ch == '.' ; ch = getch()) {
+        if (ch == '.') {
+            faction = 1;
+        } else {
+            *fp = *fp + ((ch  - '0') / pow(10, fraction));
+            fraction++'
+        }
+        digits++;
+    }
+    /* Fill in the rest. */
+}
+
+
