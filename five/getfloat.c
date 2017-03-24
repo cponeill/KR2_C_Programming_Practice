@@ -92,7 +92,13 @@ int getflaot(float *pn)
         }
         digits++;
     }
-    /* Fill in the rest. */
+    *fp = sign;
+    if (ch == EOF) {
+        return EOF;
+    } else {
+        ungetch(ch);
+        return (digits) ? ch : 0;
+    }
 }
 
 
