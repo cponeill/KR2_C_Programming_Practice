@@ -2,12 +2,16 @@
 
 void strcpy(char *s, char *t)
 {
-    /* Fill in code. */
+    while(*s++ = *t++);
 }
 
 void strcat(char *s, char *t)
 {
-    /* Fill in code. */
+    while(*s)
+    {
+        ++s;
+    }
+    strcpy(s, t);
 }
 
 int main(void)
