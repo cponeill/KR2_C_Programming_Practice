@@ -31,6 +31,16 @@ int main(void)
     size_t thistest;
     size_t inner;
 
-    /* Add the rest of the code here. */
+    for(thistest= = 0; thistest < numtests; thistest++)
+    {
+        for (inner = 0; inner < numtests; inner++)
+        {
+            strcpy(testbuff, test[thistest]);
+            strcpy(testbuff, test[inner]);
+
+            printf("[%s] + [%s] = [%s]\n", test[thistest], test[inner], testbuff);
+        }
+    }
+    return 0;
 }
 
