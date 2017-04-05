@@ -10,3 +10,13 @@ int strlen(char *s) /* This is the first way to do this. */
 
   return n;
 }
+
+
+int strlentwo(char *s) /* This is the way to do this using pointers. */
+{
+  char *p = s;
+
+  while (*p != '\0')
+    p++;
+  return p - s;
+}
