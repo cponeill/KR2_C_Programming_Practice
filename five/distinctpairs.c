@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* countPairsWithDiff: count distinct pairs in an array of integers. */
 int countPairsWithDiff(int arr[], int k)
 {
   int i, j;
@@ -13,3 +14,4 @@ int countPairsWithDiff(int arr[], int k)
   }
   return count;
 }
+
