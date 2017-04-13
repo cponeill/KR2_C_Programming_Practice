@@ -11,6 +11,6 @@ int simpleCount(int n)
 
 int main(void)
 {
-  int number = 10;
+  int number = 5;
   printf("%d\n", simpleCount(number));
 }
